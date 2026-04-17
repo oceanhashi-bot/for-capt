@@ -482,14 +482,21 @@ const App = () => {
                     <Phone size={20} />
                   </div>
                   <div className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Phone</div>
-                  <div className="text-navy font-medium">+XX XXX XXXXXXX</div>
+                  <div className="text-navy font-medium">+971 52 900 4516</div>
                 </div>
                 <div className="text-center space-y-4">
-                  <div className="w-12 h-12 bg-navy text-offwhite rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 bg-navy text-offwhite rounded-full flex items-center justify-center mx-auto transition-transform hover:scale-110">
                     <Linkedin size={20} />
                   </div>
                   <div className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">LinkedIn</div>
-                  <div className="text-navy font-medium hover:text-gold transition-colors cursor-pointer">Professional Profile</div>
+                  <a 
+                    href="https://www.linkedin.com/in/capt-prabhjot-singh-arora-1318007a/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-navy font-medium hover:text-gold transition-colors block"
+                  >
+                    Professional Profile
+                  </a>
                 </div>
               </div>
 
@@ -565,8 +572,12 @@ const App = () => {
               © {new Date().getFullYear()} Capt. Prabhjot Singh Arora. All Rights Reserved.
             </div>
             <div className="flex gap-6">
-              <Linkedin size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
-              <Mail size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
+              <a href="https://www.linkedin.com/in/capt-prabhjot-singh-arora-1318007a/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                <Linkedin size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
+              </a>
+              <a href="mailto:inquiry@captarora.com" title="Email Inquiry">
+                <Mail size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
