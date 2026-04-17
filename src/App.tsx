@@ -45,15 +45,15 @@ const App = () => {
     { label: 'Years at Sea', value: '25+' },
     { label: 'Disputes Resolved', value: '150+' },
     { label: 'Global Jurisdictions', value: '12' },
-    { label: 'Arbitration Panels', value: '08' },
+    { label: 'Advised Engagements', value: '150+' },
   ];
 
   const practiceAreas = [
     {
-      title: "Maritime Arbitration",
-      desc: "Independent adjudication of high-stakes maritime disputes under LMAA, SCMA, and ICC rules.",
+      title: "Maritime Advisory Services",
+      desc: "Expert representation and advice for high-stakes maritime disputes under various international rules.",
       icon: <Scale className="text-gold" size={24} />,
-      details: ["LMAA Terms", "SCMA Rules", "Ad-hoc Proceedings"]
+      details: ["LMAA Terms", "SCMA Rules", "Ad-hoc Advisory"]
     },
     {
       title: "Charterparty Disputes",
@@ -75,7 +75,7 @@ const App = () => {
     },
     {
       title: "Expert Witness",
-      desc: "Provision of authoritative expert testimony in High Court and international arbitration proceedings.",
+      desc: "Provision of authoritative expert testimony in High Court and international legal proceedings.",
       icon: <Award className="text-gold" size={24} />,
       details: ["Technical Reports", "Oral Testimony", "Practice Advice"]
     },
@@ -104,7 +104,7 @@ const App = () => {
             className="flex flex-col"
           >
             <span className="font-serif text-2xl font-semibold tracking-tight text-navy">Capt. Prabhjot Singh Arora</span>
-            <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-semibold">Maritime Arbitrator</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-semibold">Marine Adviser & Consultant</span>
           </motion.div>
 
           {/* Desktop Nav */}
@@ -179,7 +179,7 @@ const App = () => {
               </h1>
               <div className="grid md:grid-cols-2 gap-12 items-end">
                 <p className="text-xl md:text-2xl text-navy/70 font-light leading-relaxed text-balance">
-                  Capt. Prabhjot Singh Arora provides independent arbitration and expert advisory for the global shipping industry, specializing in complex charterparty and commercial claims.
+                  Capt. Prabhjot Singh Arora provides independent consultancy and expert advisory for the global shipping industry, specializing in complex charterparty and commercial claims.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="#contact" className="premium-button">
@@ -249,7 +249,7 @@ const App = () => {
 
               <div className="space-y-10">
                 <div className="space-y-4">
-                  <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold">The Arbitrator</span>
+                  <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold">The Consultant</span>
                   <h2 className="text-4xl md:text-5xl font-medium text-navy">A Career Built on Operational Excellence.</h2>
                 </div>
                 
@@ -258,7 +258,7 @@ const App = () => {
                     Capt. Prabhjot Singh Arora brings over two decades of command experience at sea, coupled with extensive shore-based commercial exposure. This dual perspective allows him to bridge the gap between technical maritime operations and complex legal interpretations.
                   </p>
                   <p>
-                    Having served as Master on a diverse fleet of international vessels, he possesses a first-hand understanding of the challenges faced by shipowners and charterers. His transition to arbitration was driven by a commitment to providing the industry with commercially sensible and legally robust dispute resolution.
+                    Having served as Master on a diverse fleet of international vessels, he possesses a first-hand understanding of the challenges faced by shipowners and charterers. His transition to consultancy was driven by a commitment to providing the industry with commercially sensible and legally robust advisory services.
                   </p>
                   <p className="italic font-serif text-navy/90 border-l-2 border-gold pl-6 py-2">
                     "My approach is rooted in the belief that maritime disputes require not just legal knowledge, but a deep-seated understanding of the sea's operational realities."
@@ -343,12 +343,12 @@ const App = () => {
                 {
                   category: "Charterparty",
                   title: "Safe Port Dispute - Middle East",
-                  desc: "Sole arbitrator in a multi-million dollar dispute involving vessel damage at a restricted draft port during extreme weather events."
+                  desc: "Technical adviser in a multi-million dollar dispute involving vessel damage at a restricted draft port during extreme weather events."
                 },
                 {
                   category: "Performance",
                   title: "Speed & Consumption Warranty",
-                  desc: "Tribunal member for a series of claims involving hull fouling and weather factor adjustments under NYPE 2015 terms."
+                  desc: "Expert adviser for a series of claims involving hull fouling and weather factor adjustments under NYPE 2015 terms."
                 },
                 {
                   category: "Laytime",
@@ -391,7 +391,7 @@ const App = () => {
                   {[
                     {
                       title: "Absolute Independence",
-                      desc: "Maintaining strict separation from all parties to ensure the integrity of the award."
+                      desc: "Maintaining strict separation from all parties to ensure the integrity of the advice."
                     },
                     {
                       title: "Commercial Reality",
@@ -399,7 +399,7 @@ const App = () => {
                     },
                     {
                       title: "Procedural Efficiency",
-                      desc: "Minimizing delays through active tribunal management and clear directions."
+                      desc: "Minimizing delays through active case management and clear directions."
                     }
                   ].map((item, idx) => (
                     <div key={idx} className="flex gap-6">
@@ -428,11 +428,11 @@ const App = () => {
                           <span className="text-navy/40 italic">London</span>
                         </li>
                         <li className="flex justify-between border-b border-navy/5 pb-2">
-                          <span>SCMA Panel of Arbitrators</span>
+                          <span>SCMA Professional Member</span>
                           <span className="text-navy/40 italic">Singapore</span>
                         </li>
                         <li className="flex justify-between border-b border-navy/5 pb-2">
-                          <span>HKMAG Member</span>
+                          <span>HKMAG Professional Member</span>
                           <span className="text-navy/40 italic">Hong Kong</span>
                         </li>
                       </ul>
@@ -533,10 +533,10 @@ const App = () => {
             <div className="max-w-sm space-y-6">
               <div className="flex flex-col">
                 <span className="font-serif text-2xl font-semibold tracking-tight">Capt. Prabhjot Singh Arora</span>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-semibold">Maritime Arbitrator</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-gold font-semibold">Marine Adviser & Consultant</span>
               </div>
               <p className="text-offwhite/40 text-sm leading-relaxed">
-                Independent maritime arbitration and expert advisory for the global shipping and legal community.
+                Independent maritime advisory and expert consultancy for the global shipping and legal community.
               </p>
             </div>
             
