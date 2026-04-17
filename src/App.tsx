@@ -10,6 +10,7 @@ import {
   Mail, 
   Phone, 
   Linkedin,
+  MessageCircle,
   ChevronRight,
   Menu,
   X,
@@ -478,11 +479,13 @@ const App = () => {
                   <div className="text-navy font-medium">inquiry@captarora.com</div>
                 </div>
                 <div className="text-center space-y-4">
-                  <div className="w-12 h-12 bg-navy text-offwhite rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 bg-navy text-offwhite rounded-full flex items-center justify-center mx-auto transition-transform hover:scale-110">
                     <Phone size={20} />
                   </div>
                   <div className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Phone</div>
-                  <div className="text-navy font-medium">+971 52 900 4516</div>
+                  <a href="tel:+971529004516" className="text-navy font-medium hover:text-gold transition-colors block underline-offset-4 hover:underline">
+                    +971 52 900 4516
+                  </a>
                 </div>
                 <div className="text-center space-y-4">
                   <div className="w-12 h-12 bg-navy text-offwhite rounded-full flex items-center justify-center mx-auto transition-transform hover:scale-110">
@@ -499,35 +502,6 @@ const App = () => {
                   </a>
                 </div>
               </div>
-
-              <form className="grid md:grid-cols-2 gap-x-12 gap-y-8 bg-offwhite p-12 shadow-2xl shadow-navy/5 border border-navy/5">
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Full Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-navy/10 py-3 focus:border-gold outline-none transition-colors" required />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Company / Law Firm</label>
-                  <input type="text" className="w-full bg-transparent border-b border-navy/10 py-3 focus:border-gold outline-none transition-colors" required />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Email Address</label>
-                  <input type="email" className="w-full bg-transparent border-b border-navy/10 py-3 focus:border-gold outline-none transition-colors" required />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Jurisdiction</label>
-                  <input type="text" className="w-full bg-transparent border-b border-navy/10 py-3 focus:border-gold outline-none transition-colors" />
-                </div>
-                <div className="md:col-span-2 space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-navy/40 font-bold">Nature of Dispute</label>
-                  <textarea rows={4} className="w-full bg-transparent border-b border-navy/10 py-3 focus:border-gold outline-none transition-colors resize-none" placeholder="Brief description of the matter..." required></textarea>
-                </div>
-                <div className="md:col-span-2 pt-4">
-                  <button type="submit" className="w-full premium-button">
-                    Submit Professional Inquiry
-                    <ArrowRight size={16} className="ml-2" />
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
         </section>
@@ -572,6 +546,9 @@ const App = () => {
               © {new Date().getFullYear()} Capt. Prabhjot Singh Arora. All Rights Reserved.
             </div>
             <div className="flex gap-6">
+              <a href="https://wa.me/971529004516" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+                <MessageCircle size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
+              </a>
               <a href="https://www.linkedin.com/in/capt-prabhjot-singh-arora-1318007a/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
                 <Linkedin size={16} className="text-offwhite/20 hover:text-gold transition-colors cursor-pointer" />
               </a>
@@ -582,6 +559,30 @@ const App = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating Contact Action */}
+      <motion.a
+        href="https://wa.me/971529004516"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, y: 30, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        whileHover={{ scale: 1.05, backgroundColor: '#0B1C2D' }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-10 right-10 z-[100] flex items-center gap-4 bg-navy text-gold p-5 rounded-full shadow-[0_20px_50px_rgba(11,28,45,0.3)] border border-gold/30 hover:border-gold transition-all duration-300 group ring-4 ring-gold/5"
+        title="Direct WhatsApp Inquiry"
+      >
+        <div className="relative">
+          <MessageCircle size={24} strokeWidth={1.5} />
+          <span className="absolute -top-1 -right-1 flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
+          </span>
+        </div>
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-700 ease-in-out text-[11px] uppercase tracking-[0.2em] font-bold whitespace-nowrap">
+          Drop a WhatsApp Message
+        </span>
+      </motion.a>
     </div>
   );
 };
